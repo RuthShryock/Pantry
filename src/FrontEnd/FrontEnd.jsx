@@ -9,12 +9,12 @@ export default class FrontEnd extends Component{
             <div className="loginDiv">
                 <h1>Login</h1>
                 <input placeholder="Username or E-mail"></input>
-                <br />
+                <br/>
                 <input placeholder="Password"></input>
-                <br />
+                <br/><br/>
                 <button>Login</button>
-                <br />
-                <a href="/signup">Sign Up</a>
+                <br/><br/>
+                <text>Not registered? </text><a href="/signup">Sign Up</a>
             </div>
         );
     }

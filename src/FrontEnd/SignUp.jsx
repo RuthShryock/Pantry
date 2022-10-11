@@ -9,13 +9,19 @@ export default class SignUp extends Component{
         return(
             <div className="loginDiv">
                 <h1>Sign-Up</h1>
-                <input placeholder="Username or E-mail"></input>
-                <br />
+                <input placeholder="First Name"></input>
+                <br/>
+                <input placeholder="Last Name"></input>
+                <br/>
+                <input placeholder="E-mail"></input>
+                <br/>
                 <input placeholder="Password"></input>
-                <br />
-                <button>Login</button>
-                <br />
-                <a href='/login'>Login</a>
+                <br/>
+                <input placeholder="Confirm Password"></input>
+                <br/><br/>
+                <button>Signup</button>
+                <br/><br/>
+                <text>Already Registered? </text><a href='/login'>Login</a>
             </div>
         );
     }
