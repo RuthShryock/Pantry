@@ -234,17 +234,17 @@ User.findByIdAndUpdate('id', {$set: {firstname: 'Ademo'}}).then((user) => {
 });
 
 // find the user by favoriteRecipes
-User.find({favoriteRecipes: 'recipe'}).then((user) => {
+User.find({favoriteRecipes: 'carrot soup'}).then((user) => {
         // code goes here
 });
 
 // find the user by favoriteIngredients
-User.find({favoriteIngredients: 'ingredient'}).then((user) => {
+User.find({favoriteIngredients: 'carrot'}).then((user) => {
         // code goes here
 });
 
 // find the user by favoriteCuisines
-User.find({favoriteCuisines: 'cuisine'}).then((user) => {
+User.find({favoriteCuisines: 'european'}).then((user) => {
         // code goes here
 });
 
