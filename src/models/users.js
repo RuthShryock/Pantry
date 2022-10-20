@@ -233,6 +233,22 @@ User.findByIdAndUpdate('id', {$set: {firstname: 'Ademo'}}).then((user) => {
 
 });
 
+// find the user by favoriteRecipes
+User.find({favoriteRecipes: 'recipe'}).then((user) => {
+        // code goes here
+});
+
+// find the user by favoriteIngredients
+User.find({favoriteIngredients: 'ingredient'}).then((user) => {
+        // code goes here
+});
+
+// find the user by favoriteCuisines
+User.find({favoriteCuisines: 'cuisine'}).then((user) => {
+        // code goes here
+});
+
+
 
 
    
