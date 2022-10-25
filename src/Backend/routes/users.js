@@ -1,29 +1,11 @@
 const express = require('express');
 const router = express.Router();
 
-const User = require('../models/users');
+const User = require('../models/user');
 
-router.get('/', (req, res) => {
-  const newUser = new User({
-    firstname: 'Ademo',
-    lastname: 'PNL',
-    email: 'ademoPNL@onizuka.fr',
-    address: '1000 rue de la paix',
-    phoneNumber: '1000 1000 1000',
-    password: 'password',
-    favoriteRecipes: [],
-    paymentInfo: {},
-    location: {},
-    favoriteIngredients: [],
-    favoriteCuisines: [],
-    searchHistory: [],
-  });
-
-  res.send(`New user created ${newUser["firstname"]}`);
+router.get('/', async (req, res) => {
+  const queryRes = await User.find({ firstName: "Bob"});
+  res.status(200).send(queryRes);
 });
-
-router.post('/', function(req, res) {
-  res.send("POST on users page");
-})
 
 module.exports = router;
