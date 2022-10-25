@@ -19,7 +19,6 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const path = require('path');
 
-
 // connect to the database 
 mongoose.connect(dbURL)
         .then(() => {
