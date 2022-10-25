@@ -4,6 +4,7 @@
 
 require('dotenv').config();
 
+// TODO: replace with env vars
 const dbURL = "mongodb+srv://APIAccess:apiteam123456@cop4331-largeproject-pa.yxoncp7.mongodb.net/?retryWrites=true&w=majority";
 const port = 3001;
 
@@ -19,8 +20,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const path = require('path');
 
-
-// connect to the database 
+// connect to the database
 mongoose.connect(dbURL)
         .then(() => {
             // if all is ok we will be here
@@ -37,3 +37,11 @@ mongoose.connect(dbURL)
 const db = mongoose.connection;
 db.on('error', (error) => console.error(error));
 db.once('open', () => console.log('-----DB opening-----successfully connected to the database')); 
+
+// Endpoints
+app.get('/', (req, res) => {
+    res.send("Hello world!");
+});
+
+const users = require('./routes/users');
+app.use('/users', users);
