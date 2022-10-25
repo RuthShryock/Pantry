@@ -3,7 +3,7 @@ const router = express.Router();
 
 const User = require('../models/users');
 
-router.get('/', function(req, res) {
+router.get('/', (req, res) => {
   const newUser = new User({
     firstname: 'Ademo',
     lastname: 'PNL',
