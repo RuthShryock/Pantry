@@ -1,5 +1,3 @@
-require('dotenv').config();
-
 // TODO: replace with env vars
 const dbURL = "mongodb+srv://APIAccess:apiteam123456@cop4331-largeproject-pa.yxoncp7.mongodb.net/?retryWrites=true&w=majority";
 const port = 3001;
