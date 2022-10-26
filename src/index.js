@@ -1,18 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import SignUp from "./FrontEnd/SignUp";
+import reportWebVitals from './reportWebVitals';
+import SignUp from "./FrontEnd/SignUp/SignUp";
+import Login from './FrontEnd/Login/Login';
+import ReactDOM from 'react-dom/client';
+import React from 'react';
+import App from './App';
+import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />} />
-      <Route path="/login" element={<App />} />
-      <Route path="signup" element={<SignUp />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<SignUp />} />
     </Routes>
   </BrowserRouter>,
   document.getElementById("root")
