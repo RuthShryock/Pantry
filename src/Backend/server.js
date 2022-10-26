@@ -6,6 +6,7 @@ const port = 3001;
 
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser').json();
 
 const mongoose = require('mongoose');
 const mongoclient = require('mongodb').MongoClient;
@@ -22,10 +23,10 @@ mongoose.connect(dbURL)
         });
 const db = mongoose.connection;
 db.on('error', (error) => console.error(error));
-db.once('open', () => console.log('-----DB opening-----successfully connected to the database')); 
+db.once('open', () => console.log('-----DB opening-----successfully connected to the database'));
 
 // Endpoints
-app.get('/', (req, res) => {
+app.get('/', bodyParser, (req, res) => {
     res.send("Hello world!");
 });
 

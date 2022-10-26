@@ -2,8 +2,9 @@ const express = require('express');
 const router = express.Router();
 
 const User = require('../models/user');
+const bodyParser = require('body-parser').json();
 
-router.post('/', async (req, res) => {
+router.post('/', bodyParser, async (req, res) => {
   var loginUser = {
     email: req.body.email,
     password: req.body.password
